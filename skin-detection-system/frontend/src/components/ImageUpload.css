@@ -91,3 +91,134 @@
     font-size: 0.9rem;
     backdrop-filter: blur(5px);
 }
+
+.upload-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.divider span {
+    padding: 0 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.btn-start-camera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 12px;
+    color: #818cf8;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-start-camera:hover {
+    background: rgba(99, 102, 241, 0.3);
+    border-color: rgba(99, 102, 241, 0.5);
+    color: white;
+}
+
+.camera-container {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.camera-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.camera-selector select {
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    flex: 1;
+    cursor: pointer;
+}
+
+.camera-selector select option {
+    background: #1e1e2f;
+}
+
+.camera-preview {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    background: #000;
+}
+
+.camera-controls {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.btn-capture {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-capture:hover {
+    background: #059669;
+}
+
+.btn-cancel {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-cancel:hover {
+    background: rgba(239, 68, 68, 0.8);
+}

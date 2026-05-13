@@ -1,5 +1,6 @@
 import React from 'react';
-import { AlertCircle, CheckCircle, Info } from 'lucide-react';
+import { AlertCircle, CheckCircle, Info, Bot } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 import './ResultCard.css';
 
 const ResultCard = ({ prediction, disclaimer }) => {
@@ -41,6 +42,18 @@ const ResultCard = ({ prediction, disclaimer }) => {
                     <Info size={20} className="info-icon" />
                     <p>{prediction.explanation}</p>
                 </div>
+                
+                {prediction.recommendation && (
+                    <div className="recommendation-box">
+                        <div className="recommendation-header">
+                            <Bot size={20} className="bot-icon" />
+                            <h3>AI Recommendation</h3>
+                        </div>
+                        <div className="recommendation-content">
+                            <ReactMarkdown>{prediction.recommendation}</ReactMarkdown>
+                        </div>
+                    </div>
+                )}
             </div>
             
             {disclaimer && (

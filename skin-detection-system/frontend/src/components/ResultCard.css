@@ -135,6 +135,78 @@
     text-align: center;
 }
 
+.recommendation-box {
+    background: rgba(167, 139, 250, 0.1);
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.recommendation-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #a78bfa;
+}
+
+.recommendation-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.bot-icon {
+    flex-shrink: 0;
+}
+
+.recommendation-content p {
+    margin: 0 0 0.75rem 0;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.recommendation-content p:last-child {
+    margin-bottom: 0;
+}
+
+.recommendation-content strong {
+    color: white;
+    font-weight: 600;
+}
+
+.recommendation-content ul,
+.recommendation-content ol {
+    margin: 0.5rem 0 1rem 1.5rem;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.recommendation-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.recommendation-content h1,
+.recommendation-content h2,
+.recommendation-content h3,
+.recommendation-content h4 {
+    color: white;
+    margin: 1.5rem 0 0.75rem 0;
+    font-size: 1.05rem;
+}
+
+.recommendation-content h1:first-child,
+.recommendation-content h2:first-child,
+.recommendation-content h3:first-child {
+    margin-top: 0;
+}
+
 @media (max-width: 600px) {
     .prediction-main {
         grid-template-columns: 1fr;

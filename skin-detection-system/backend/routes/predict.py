@@ -2,6 +2,7 @@ from fastapi import APIRouter, UploadFile, File
 from fastapi.responses import JSONResponse
 from utils.image_preprocess import process_image
 from services.model_service import get_prediction
+from services.llm_service import get_recommendation
 import traceback
 
 router = APIRouter()
@@ -17,6 +18,11 @@ async def predict_skin_condition(file: UploadFile = File(...)):
         
         # Get prediction
         prediction_result = get_prediction(img)
+        
+        # Get recommendation from LLM
+        predicted_class = prediction_result.get("class", "Unknown")
+        recommendation = get_recommendation(predicted_class)
+        prediction_result["recommendation"] = recommendation
         
         return {
             "success": True,
